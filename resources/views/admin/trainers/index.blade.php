@@ -7,7 +7,7 @@
 
 <div class="admin-card-header mb-4" style="padding:0">
     <h2 class="admin-page-title">Svi treneri</h2>
-    <a href="{{ route('admin.trainers.create') }}" class="btn btn-accent btn-sm px-3">
+    <a href="{{ route('admin.trainers.create') }}" class="btn btn-success btn-sm px-3">
         <i class="bi bi-plus-lg me-1"></i> Dodaj trenera
     </a>
 </div>

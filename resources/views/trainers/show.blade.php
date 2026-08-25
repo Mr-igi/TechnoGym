@@ -244,7 +244,7 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="btn btn-accent btn-lg px-5 w-100 mt-3" id="bookBtn" disabled>
+                        <button type="submit" class="btn btn-success btn-lg px-5 w-100 mt-3" id="bookBtn" disabled>
                             <i class="bi bi-calendar-check me-2"></i>Potvrdi termin
                         </button>
                         <p style="font-size:0.75rem; color:var(--text-muted); text-align:center; margin-top:0.75rem">

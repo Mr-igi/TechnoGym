@@ -134,10 +134,13 @@
                     <span style="font-size:0.875rem; color:var(--text-dim)">Aktivan (vidljiv korisnicima)</span>
                 </label>
             </div>
-            <div class="col-12 mt-2">
-                <button type="submit" class="btn btn-accent px-4">
+            <div class="col-12 mt-2 d-flex gap-2">
+                <button type="submit" class="btn btn-success px-4">
                     <i class="bi bi-check-lg me-1"></i> Sacuvaj izmene
                 </button>
+                <a href="{{ route('admin.trainers.index') }}" class="btn btn-outline-danger px-4">
+                    <i class="bi bi-x-lg me-1"></i> Otkazi
+                </a>
             </div>
         </div>
     </form>
@@ -187,8 +190,7 @@
                                       action="{{ route('admin.group-classes.destroy', [$trainer, $class]) }}"
                                       onsubmit="return confirm('Obrisati ovaj trening?')">
                                     @csrf @method('DELETE')
-                                    <button type="submit" class="btn btn-ghost btn-sm"
-                                            style="color:#e55353; border-color:rgba(229,83,83,0.3)">
+                                    <button type="submit" class="admin-btn-icon admin-btn-icon--danger" title="Obrisi">
                                         <i class="bi bi-trash"></i>
                                     </button>
                                 </form>
@@ -269,7 +271,7 @@
                 </div>
 
                 <div class="col-12 mt-1">
-                    <button type="submit" class="btn btn-accent px-4">
+                    <button type="submit" class="btn btn-success px-4">
                         <i class="bi bi-plus-lg me-1"></i> Dodaj trening
                     </button>
                 </div>

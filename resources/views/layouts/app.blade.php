@@ -50,7 +50,7 @@
                     </div>
                 @else
                     <a href="{{ route('login') }}" class="btn btn-ghost btn-sm px-3">Prijavite se</a>
-                    <a href="{{ route('register') }}" class="btn btn-accent btn-sm px-3">Upisite se</a>
+                    <a href="{{ route('register') }}" class="btn btn-success btn-sm px-3">Upisite se</a>
                 @endauth
             </div>
         </div>

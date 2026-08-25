@@ -55,7 +55,7 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-accent w-100 btn-lg">
+            <button type="submit" class="btn btn-success w-100 btn-lg">
                 Upisite se
             </button>
         </form>

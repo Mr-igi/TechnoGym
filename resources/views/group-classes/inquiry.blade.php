@@ -155,7 +155,7 @@
                                   placeholder="Pitanja, napomene ili posebni zahtevi...">{{ old('poruka') }}</textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-accent btn-lg px-5">
+                    <button type="submit" class="btn btn-success btn-lg px-5">
                         <i class="bi bi-send me-2"></i>Posalji prijavu
                     </button>
 

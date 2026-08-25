@@ -86,10 +86,13 @@
                 </label>
             </div>
 
-            <div class="col-12 mt-2">
-                <button type="submit" class="btn btn-accent px-4">
+            <div class="col-12 mt-2 d-flex gap-2">
+                <button type="submit" class="btn btn-success px-4">
                     <i class="bi bi-check-lg me-1"></i> Sacuvaj izmene
                 </button>
+                <a href="{{ route('admin.memberships.index') }}" class="btn btn-outline-danger px-4">
+                    <i class="bi bi-x-lg me-1"></i> Otkazi
+                </a>
             </div>
         </div>
     </form>

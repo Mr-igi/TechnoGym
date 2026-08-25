@@ -9,6 +9,20 @@
   --accent-hover:#aa1a00;
   --accent-soft: rgba(204, 34, 0, 0.10);
   --accent-border: rgba(204, 34, 0, 0.28);
+
+  /* Semanticke boje akcija: zeleno = potvrdi/sacuvaj, crveno = obrisi/otkazi */
+  --success:        #15803d;
+  --success-hover:  #0f6a31;
+  --success-text:   #4ade80;
+  --success-soft:   rgba(34, 197, 94, 0.10);
+  --success-border: rgba(34, 197, 94, 0.32);
+
+  --danger:         #cc3d3d;
+  --danger-hover:   #b02f2f;
+  --danger-text:    #e55353;
+  --danger-soft:    rgba(229, 83, 83, 0.10);
+  --danger-border:  rgba(229, 83, 83, 0.32);
+
   --text-light:  #f0f0f0;
   --text-dim:    #b0b0b0;
   --text-muted:  #6a6a6a;
@@ -99,6 +113,92 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(204,34,0,0.3);
 }
+/* Zeleno — potvrdi, sacuvaj, upisi se */
+.btn-success {
+  background-color: var(--success);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  letter-spacing: 0.4px;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(21, 128, 61, 0.30);
+  transition: background-color 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.btn-success:hover,
+.btn-success:focus-visible,
+.btn-success:active {
+  background-color: var(--success-hover) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(21, 128, 61, 0.42);
+}
+.btn-success:disabled,
+.btn-success.disabled {
+  background-color: var(--success);
+  color: #fff;
+  opacity: 0.45;
+  transform: none;
+  box-shadow: none;
+}
+.btn-outline-success {
+  border: 1.5px solid var(--success-border);
+  color: var(--success-text);
+  background: transparent;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.btn-outline-success:hover,
+.btn-outline-success:focus-visible,
+.btn-outline-success:active {
+  background-color: var(--success) !important;
+  border-color: var(--success) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(21, 128, 61, 0.32);
+}
+
+/* Crveno — obrisi, otkazi */
+.btn-danger {
+  background-color: var(--danger);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  letter-spacing: 0.4px;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(204, 61, 61, 0.28);
+  transition: background-color 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.btn-danger:hover,
+.btn-danger:focus-visible,
+.btn-danger:active {
+  background-color: var(--danger-hover) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(204, 61, 61, 0.38);
+}
+.btn-outline-danger {
+  border: 1.5px solid var(--danger-border);
+  color: var(--danger-text);
+  background: transparent;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.btn-outline-danger:hover,
+.btn-outline-danger:focus-visible,
+.btn-outline-danger:active {
+  background-color: var(--danger) !important;
+  border-color: var(--danger) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(204, 61, 61, 0.30);
+}
+
 .btn-ghost {
   border: 1px solid var(--border);
   color: var(--text-light);
@@ -811,7 +911,7 @@ body {
   display: flex; align-items: center; justify-content: center;
   cursor: pointer; transition: all 0.15s; font-size: 0.9rem;
 }
-.admin-logout-btn:hover { border-color: #e55353; color: #e55353; }
+.admin-logout-btn:hover { border-color: var(--danger-border); background: var(--danger-soft); color: var(--danger-text); }
 
 .admin-main {
   margin-left: 260px; flex: 1; display: flex; flex-direction: column;
@@ -909,7 +1009,26 @@ body {
   font-size: 0.8rem; transition: all 0.15s; text-decoration: none;
 }
 .admin-btn-icon:hover { border-color: rgba(255,255,255,0.15); color: var(--text-light); }
-.admin-btn-icon--danger:hover { border-color: #e55353; color: #e55353; }
+.admin-btn-icon--danger {
+  border-color: var(--danger-border);
+  color: var(--danger-text);
+  background: var(--danger-soft);
+}
+.admin-btn-icon--danger:hover {
+  border-color: var(--danger);
+  background: var(--danger);
+  color: #fff;
+}
+.admin-btn-icon--success {
+  border-color: var(--success-border);
+  color: var(--success-text);
+  background: var(--success-soft);
+}
+.admin-btn-icon--success:hover {
+  border-color: var(--success);
+  background: var(--success);
+  color: #fff;
+}
 
 .admin-btn-sm {
   padding: 0.3rem 0.55rem; border-radius: 6px; font-size: 0.8rem;
@@ -917,10 +1036,18 @@ body {
   color: var(--text-muted); cursor: pointer; transition: all 0.15s;
 }
 .admin-btn-sm:hover { border-color: rgba(255,255,255,0.15); color: var(--text-light); }
-.admin-btn-sm--green { border-color: rgba(34,197,94,0.3); color: #4ade80; }
-.admin-btn-sm--green:hover { background: rgba(34,197,94,0.1); }
-.admin-btn-sm--red { border-color: rgba(229,83,83,0.3); color: #e55353; }
-.admin-btn-sm--red:hover { background: rgba(229,83,83,0.1); }
+.admin-btn-sm--green {
+  border-color: var(--success-border);
+  color: var(--success-text);
+  background: var(--success-soft);
+}
+.admin-btn-sm--green:hover { background: var(--success); border-color: var(--success); color: #fff; }
+.admin-btn-sm--red {
+  border-color: var(--danger-border);
+  color: var(--danger-text);
+  background: var(--danger-soft);
+}
+.admin-btn-sm--red:hover { background: var(--danger); border-color: var(--danger); color: #fff; }
 
 .admin-color-picker { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 .admin-color-option { cursor: pointer; }

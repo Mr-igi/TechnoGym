@@ -197,7 +197,7 @@
                             @enderror
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="btn btn-accent btn-lg px-5">
+                            <button type="submit" class="btn btn-success btn-lg px-5">
                                 <i class="bi bi-send-fill me-2"></i>Posalji poruku
                             </button>
                         </div>

@@ -97,7 +97,7 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="btn btn-accent btn-lg w-100" id="submitBtn">
+                        <button type="submit" class="btn btn-success btn-lg w-100" id="submitBtn">
                             <i class="bi bi-lock-fill me-2"></i>
                             Plati {{ number_format($plan['price'], 0, ',', '.') }} RSD
                         </button>
